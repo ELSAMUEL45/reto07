@@ -31,4 +31,42 @@ for i in range(1, n + 1):
         f = f * j
     print("El factorial de", i, "es", f)
 ```
+Calcular 2 elevado a la n usando ciclo for
+```python
+n = int(input("Ingrese el exponente n: "))
+resultado = 1
+for i in range(n):
+    resultado = resultado * 2
+print("2 elevado a", n, "es", resultado)
+```
+Calcular xⁿ (x real, n natural) sin usar **
+```python
+for tabla in range(1, 10):
+    print("Tabla del", tabla)
+    for i in range(1, 11):
+        print(tabla, "x", i, "da", tabla * i)
+    print()
+```
+ Aproximar la exponencial e^x con n términos de la serie de Taylor
+ ```python
+import math
+
+x = float(input("Ingrese el valor de x: "))
+n = int(input("Ingrese el número de términos: "))
+suma = 0
+
+for i in range(n + 1):
+    f = 1
+    for j in range(1, i + 1):
+        f = f * j
+    suma = suma + (x ** i) / f
+
+print("Aproximación de exp(", x, ") con", n, "términos es:", suma)
+print("Valor real usando math.exp:", math.exp(x))
+print("Diferencia:", abs(math.exp(x) - suma))
+```
+
+
+```
+
 
